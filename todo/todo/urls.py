@@ -1,5 +1,5 @@
 """
-URL configuration for rest_api_using_django project.
+URL configuration for todo project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -14,9 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# todo/todo/urls.py : Main urls.py
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from todo_api import urls as todo_urls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("todo/", include(todo_urls)),
 ]
+
+

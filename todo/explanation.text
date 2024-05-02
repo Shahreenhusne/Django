@@ -1,0 +1,4 @@
+The API logic, such as retrieving todo items or creating new todo items, is written in the view (TodoListApiView).
+The actual rendering of responses happens implicitly when returning Response objects. The data returned by the serializer is automatically converted to JSON format by DRF.
+Business logic, such as data validation and manipulation, is mostly handled by the serializer (TodoSerializer). It validates incoming data, converts complex data types to JSON, and handles deserialization of request data.
+The model (Todo) defines the structure of the data stored in the database and encapsulates database interactions. It represents the business entities in the application.
